@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: #ffffff;
+            list-style-type: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 微软雅黑;
+            line-height: 60px;
+        }
+        body{
+            background-color: rgba(239, 85, 245, 0.731);
+        }
+        .yijihezi{
+            width: 120px;
+            height: auto;
+            margin: 54px 0 0 550px;
+        }
+        .yijiliebiao{
+            width: 120px;
+        }
+        .yijiliebiao>li{
+            width: 120px;
+            height: 150px;
+            position: relative;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+        }
+        .erjihezi{
+            position: absolute;
+            left:120px;
+            bottom:50px;
+            background-color: rgba(244, 19, 202, 0.855);
+            padding: 0;
+            width: 0;
+            overflow: hidden;
+            transition: all 300ms linear;
+        }
+        .erjihezi a{
+            color: black;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .erjiliebiao{
+            width: 120px;
+        }
+        .erjiliebiao>li{
+            width: 120px;
+            height:40px;
+        }
+        .yijiliebiao>li:hover .erjihezi{
+            width: 360px;
+            padding: 10px;
+        }
+        .yijiliebiao>li>a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 60px;
+            background-color: #ea258eda;
+            z-index: -1;
+            transition: all 300ms linear;
+}
+        .yijiliebiao>li:hover a::after{
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="yijihezi">
+        <ul class="yijiliebiao">
+            <li>
+                <a href=" ">古都</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">西安</a ></li>
+                        <li><a href="#">洛阳</a ></li>
+                        <li><a href="#">南京</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">名楼</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">黄鹤楼</a ></li>
+                        <li><a href="#">岳阳楼</a ></li>
+                        <li><a href="#">滕王阁</a ></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">雄关</a >
+                <div class="erjihezi">
+                    <ul class="erjiliebiao">
+                        <li><a href="#">山海关</a ></li>
+                        <li><a href="#">嘉峪关</a ></li>
+                        <li><a href="#">雁门关</a ></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
